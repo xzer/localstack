@@ -36,6 +36,8 @@ install:
 script:
   - set -e # fail fast
   - git rev-parse --abbrev-ref HEAD
+  - git branch -a
+  - git branch
   - DEBUG=1 LAMBDA_EXECUTOR=docker make test
   - DEBUG=1 LAMBDA_EXECUTOR=local USE_SSL=1 make test
   - make docker-build
