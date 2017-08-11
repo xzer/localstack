@@ -584,7 +584,7 @@ class _RequestsSafe(type):
         def _missing(*args, **kwargs):
             if 'auth' not in kwargs:
                 kwargs['auth'] = NetrcBypassAuth()
-            if 'verify' not in kwargs:
+            if args[0].startswith('https://') and 'verify' not in kwargs:
                 kwargs['verify'] = False
             return method(*args, **kwargs)
         return _missing

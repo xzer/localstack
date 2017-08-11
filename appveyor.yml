@@ -1,0 +1,13 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+
+install:
+  - docker version
+
+build_script:
+#  - docker build -t localstack/localstack .
+  - docker pull localstack/localstack
+
+test_script:
+  # - docker run localstack/localstack
+  - make test-docker

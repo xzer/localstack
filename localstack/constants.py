@@ -104,4 +104,4 @@ ELASTICSEARCH_JAR_URL = 'https://artifacts.elastic.co/downloads/elasticsearch/el
 DYNAMODB_JAR_URL = 'https://s3-us-west-2.amazonaws.com/dynamodb-local/dynamodb_local_latest.zip'
 
 # API endpoint for analytics events
-API_ENDPOINT = 'https://api.localstack.cloud:8182/v1'
+API_ENDPOINT = 'https://api.localstack.cloud/v1'
