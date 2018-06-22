@@ -65,8 +65,8 @@ class LambdaExecutor(object):
             log_output = to_str(process.stderr.read())
 
             if return_code != 0:
-                raise Exception('Lambda process returned error status code: %s. Output:\n%s' %
-                    (return_code, log_output))
+                raise Exception('Lambda process returned error status code: %s.\nStdout:\n%s\nStderr:\n%s' %
+                    (return_code, result, log_output))
         return result, log_output
 
 
